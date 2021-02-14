@@ -17,7 +17,7 @@ class Contactos:
    #----------Metodos de la interfaz--------------------- 
 
     def crear_interfaz(self):
-        self.mostrar_splash_screen()        
+        self.mostrar_ventana_emergente()        
         self.crear_panel_logo()
         self.crear_panel_entradas()
         self.crear_area_mensaje()
@@ -25,7 +25,6 @@ class Contactos:
         self.crear_barra_desplazamiento()
         self.crear_botones_abajo()
         self.ver_contactos()        
-        self.mostrar_ventana_emergente()
 
     def crear_panel_logo(self):
         photo = PhotoImage(file='icons/logo.gif')
@@ -98,13 +97,7 @@ class Contactos:
         Button(self.emergente, text='Actualizar', command=lambda:self.modificar_contacto(id, entNuevoMail.get(), entNuevoNumero.get(), nombre)).grid(row=5, column=2, padx=5, pady=2, sticky=E)
         self.emergente.geometry('280x160')        
         self.emergente.mainloop()
-
-    def mostrar_splash_screen(self):
-        self.emergente = Toplevel()
-        self.emergente.configure(bg="sky blue")
-        Label(self.emergente, text='Splash Screen!', bg='black', fg='white').pack
-        self.emergente.mainloop()
-
+    
     def mostrar_ventana_emergente(self):
         messagebox.showinfo("Pantalla de Login", "Despues voy a poner una pantalla de logueo acá")
     
