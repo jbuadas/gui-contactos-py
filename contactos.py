@@ -17,14 +17,14 @@ class Contactos:
    #----------Metodos de la interfaz--------------------- 
 
     def crear_interfaz(self):
+        self.mostrar_splash_screen()        
         self.crear_panel_logo()
         self.crear_panel_entradas()
         self.crear_area_mensaje()
         self.crear_vista_arbol()
         self.crear_barra_desplazamiento()
         self.crear_botones_abajo()
-        self.ver_contactos()
-        #self.mostrar_splash_screen()
+        self.ver_contactos()        
         self.mostrar_ventana_emergente()
 
     def crear_panel_logo(self):
